@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>NexDev Studio | Desarrollo de Software y Aplicaciones Web en Perú</title>
-    <meta name="description" content="Agencia de desarrollo de software en Perú. Especialistas en ingeniería web, aplicaciones móviles, arquitectura cloud y transformación digital. Consulta técnica gratuita.">
-    <meta name="keywords" content="desarrollo de software, ingenieria de sistemas peru, diseño web lima, apps moviles, nexdev studio, react, python">
-    <meta name="author" content="NexDev Studio">
-    <meta name="robots" content="index, follow">
+
+    <title>Deep Line Software | Desarrollo de Software y Soluciones Digitales</title>
+    <meta name="description"
+        content="Deep Line Software: Equipo de desarrollo de software en Perú. Especialistas en ingeniería web, aplicaciones móviles y transformación digital.">
+    <meta name="keywords"
+        content="Deep Line Software, desarrollo de software peru, Eduard Chambilla, Fernando Istaña, Andrey Mestanza, Jhonsons Plasencia, Pedro Alva">
+    <meta name="author" content="Deep Line Software">
     <meta name="theme-color" content="#0A0B0D">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nexdev.studio/">
-    <meta property="og:title" content="NexDev Studio - Ingeniería de Software de Alto Nivel">
-    <meta property="og:description" content="Equipo de ingeniería especializado en soluciones digitales escalables y arquitectura de software moderna.">
-    <meta property="og:image" content="https://www.nexdev.studio/assets/img/og-preview.jpg">
+    <meta property="og:title" content="Deep Line Software - Ingeniería y Desarrollo">
+    <meta property="og:description" content="Transformamos líneas de código en soluciones profundas y escalables.">
+    <meta property="og:image" content="assets/img/og-preview.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -29,49 +30,30 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "NexDev Studio",
-      "image": "https://www.nexdev.studio/assets/img/logo.png",
-      "url": "https://www.nexdev.studio",
-      "telephone": "+51999999999",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lima",
-        "addressCountry": "PE"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/nexdev",
-        "https://github.com/nexdev"
-      ]
-    }
-    </script>
 </head>
+
 <body>
     <div class="scroll-progress" id="scrollProgress"></div>
-    
+
     <div class="glow-effect" style="background: var(--accent-primary); top: -10%; left: -10%;"></div>
     <div class="glow-effect" style="background: var(--accent-secondary); top: 40%; right: -10%;"></div>
     <div class="glow-effect" style="background: var(--accent-tertiary); bottom: -10%; left: 30%;"></div>
-    
+
     <nav class="fixed w-full z-50 glass-card border-t-0 border-x-0">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="assets/img/isotipo_dark.png" alt="Deep Line Logo"
+                            class="logo-dark h-full w-full object-contain">
+
+                        <img src="assets/img/isotipo_light.png" alt="Deep Line Logo"
+                            class="logo-light h-full w-full object-contain">
                     </div>
-                    <div>
-                        <span class="text-xl font-bold gradient-text">NexDev</span>
-                        <span class="block text-xs text-gray-500 -mt-1 font-medium">Studio</span>
+
+                    <div class="hidden sm:block">
+                        <span class="text-xl font-bold gradient-text">Deep Line</span>
                     </div>
                 </div>
 
@@ -82,27 +64,37 @@
                     <a href="#proyectos" class="nav-link">Portfolio</a>
                     <a href="#equipo" class="nav-link">Equipo</a>
                     <a href="#contacto" class="nav-link">Contacto</a>
-                    <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Cambiar tema">
+                    <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0">
                         <div class="theme-toggle-circle"></div>
                     </div>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none" aria-label="Abrir menú">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full glass-card border-t border-gray-800 p-6 md:hidden flex-col space-y-4 shadow-xl z-50">
-            <a href="#inicio" class="block text-lg font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Inicio</a>
-            <a href="#nosotros" class="block text-lg font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Nosotros</a>
-            <a href="#servicios" class="block text-lg font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Servicios</a>
-            <a href="#proyectos" class="block text-lg font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Portfolio</a>
-            <a href="#contacto" class="block text-lg font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Contacto</a>
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full border-t border-gray-800 p-6 md:hidden flex-col space-y-6 shadow-2xl z-50"
+            style="background: var(--bg-primary);">
+            <a href="#inicio" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Inicio</a>
+            <a href="#nosotros" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Nosotros</a>
+            <a href="#servicios" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Servicios</a>
+            <a href="#proyectos" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Portfolio</a>
+            <a href="#equipo" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Equipo</a>
+            <a href="#contacto" class="block text-lg font-medium hover:text-blue-500 transition-colors"
+                style="color: var(--text-primary);">Contacto</a>
             <div class="pt-4 border-t border-gray-700 flex items-center justify-between">
-                <span class="text-sm text-gray-400">Modo Oscuro/Claro</span>
+                <span class="text-sm font-medium" style="color: var(--text-secondary);">Cambiar Tema</span>
                 <div class="theme-toggle" onclick="toggleTheme()">
                     <div class="theme-toggle-circle"></div>
                 </div>
@@ -110,416 +102,360 @@
         </div>
     </nav>
 
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20">
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center py-20 md:pt-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-            <div class="section-badge fade-in-up">Excellence in Software Development</div>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight fade-in-up" style="animation-delay: 0.1s;">
-                Ingeniería de Software<br/>
-                <span class="gradient-text">de Alto Nivel</span>
+            <div class="section-badge fade-in-up">Innovación & Desarrollo</div>
+            <h1 class="text-4xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight fade-in-up"
+                style="animation-delay: 0.1s;">
+                Código Profundo,<br />
+                <span class="gradient-text">Soluciones Reales</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto fade-in-up" style="color: var(--text-secondary); font-weight: 400; animation-delay: 0.2s;">
-                Equipo especializado de ingenieros, entregando soluciones tecnológicas 
-                de nivel profesional con estándares de calidad empresarial y metodologías ágiles.
+            <p class="text-lg md:text-2xl mb-12 max-w-4xl mx-auto fade-in-up"
+                style="color: var(--text-secondary); font-weight: 400; animation-delay: 0.2s;">
+                En <strong>Deep Line Software</strong> combinamos el rigor académico de la ingeniería con la agilidad
+                del desarrollo moderno para crear experiencias digitales que impactan.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 fade-in-up" style="animation-delay: 0.3s;">
-                <button class="px-8 py-4 rounded-xl btn-primary">
-                    Ver Portfolio
-                </button>
-                <button class="px-8 py-4 rounded-xl btn-secondary">
-                    Solicitar Consulta
-                </button>
+                <button class="px-8 py-4 rounded-xl btn-primary w-full sm:w-auto">Ver Proyectos</button>
+                <button class="px-8 py-4 rounded-xl btn-secondary w-full sm:w-auto">Contactar Equipo</button>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
-                <div class="stat-card">
-                    <div class="stat-number">20+</div>
-                    <p style="color: var(--text-secondary); font-weight: 500;">Proyectos Completados</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto fade-in-up"
+                style="animation-delay: 0.4s;">
+                <div class="stat-card p-4 md:p-8">
+                    <div class="stat-number text-3xl md:text-5xl">10+</div>
+                    <p class="text-sm md:text-base" style="color: var(--text-secondary);">Proyectos</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">98%</div>
-                    <p style="color: var(--text-secondary); font-weight: 500;">Satisfacción Cliente</p>
+                <div class="stat-card p-4 md:p-8">
+                    <div class="stat-number text-3xl md:text-5xl">100%</div>
+                    <p class="text-sm md:text-base" style="color: var(--text-secondary);">Compromiso</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">5</div>
-                    <p style="color: var(--text-secondary); font-weight: 500;">Especialistas</p>
+                <div class="stat-card p-4 md:p-8">
+                    <div class="stat-number text-3xl md:text-5xl">5</div>
+                    <p class="text-sm md:text-base" style="color: var(--text-secondary);">Desarrolladores</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <p style="color: var(--text-secondary); font-weight: 500;">Soporte Técnico</p>
+                <div class="stat-card p-4 md:p-8">
+                    <div class="stat-number text-3xl md:text-5xl">3er</div>
+                    <p class="text-sm md:text-base" style="color: var(--text-secondary);">Año Ingeniería</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="nosotros" class="py-32 relative">
+    <section id="nosotros" class="py-20 md:py-32 relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="max-w-3xl mb-20 mx-auto text-center md:text-left">
-                <div class="section-badge">Nuestra Filosofía</div>
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                    Excelencia Técnica con <span class="gradient-text">Visión de Futuro</span>
+            <div class="max-w-3xl mb-12 md:mb-20 mx-auto text-center md:text-left">
+                <div class="section-badge">Quiénes Somos</div>
+                <h2 class="text-3xl md:text-6xl font-bold mb-6">
+                    Estudiantes con <span class="gradient-text">Visión Profesional</span>
                 </h2>
-                <div class="gradient-line md:ml-0"></div>
-                <p class="text-xl leading-relaxed" style="color: var(--text-secondary);">
-                    Como equipo de ingenieros en formación avanzada, combinamos el rigor académico 
-                    con la experiencia práctica. Nuestro enfoque se centra en entregar soluciones 
-                    escalables, mantenibles y de alto rendimiento, aplicando las mejores prácticas 
-                    de la industria y arquitecturas de software modernas.
+                <div class="gradient-line mx-auto md:ml-0"></div>
+                <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">
+                    Somos un equipo de 5 estudiantes de tercer año de Ingeniería de Sistemas.
+                    Nuestra fortaleza radica en que no solo escribimos código; aplicamos las últimas metodologías
+                    y estándares aprendidos en la universidad directamente a proyectos del mundo real.
+                    En <strong>Deep Line</strong>, la curiosidad académica se encuentra con la ejecución profesional.
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-20">
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20">
                 <div class="glass-card rounded-xl p-8">
                     <div class="service-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Entrega Ágil</h3>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Base Académica</h3>
                     <p style="color: var(--text-secondary);">
-                        Metodología Scrum y Kanban para sprints eficientes con entregas incrementales. 
-                        Nos adaptamos rápidamente a cambios manteniendo la calidad del código.
+                        Fundamentos de ingeniería y algoritmos optimizados para crear software robusto, no solo
+                        funcional.
                     </p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
                     <div class="service-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Código Limpio</h3>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Sinergia</h3>
                     <p style="color: var(--text-secondary);">
-                        Clean Code, principios SOLID y arquitecturas escalables. Test-driven development 
-                        con cobertura superior al 80% y code reviews exhaustivos.
+                        Como grupo universitario consolidado, tenemos una sinergia única. Trabajamos como una unidad
+                        cohesiva.
                     </p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
                     <div class="service-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M12 2v20M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Stack Moderno</h3>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Vanguardia</h3>
                     <p style="color: var(--text-secondary);">
-                        Tecnologías de vanguardia. Arquitecturas cloud-native, microservicios, 
-                        y CI/CD para despliegues continuos y automatizados.
+                        Aprendizaje constante de nuevas tecnologías y frameworks modernos antes de que se vuelvan
+                        estándar.
                     </p>
                 </div>
             </div>
 
             <div class="text-center">
-                <h3 class="text-3xl font-bold mb-8">Stack Tecnológico</h3>
+                <h3 class="text-3xl font-bold mb-8">Nuestro Stack Tecnológico</h3>
                 <div class="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">Next.js</span>
-                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Java</span>
                     <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">C++</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Node.js</span>
                     <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">Redis</span>
+                    <span class="tech-badge">Git/GitHub</span>
                     <span class="tech-badge">Docker</span>
-                    <span class="tech-badge">Kubernetes</span>
-                    <span class="tech-badge">AWS</span>
-                    <span class="tech-badge">GraphQL</span>
-                    <span class="tech-badge">Git</span>
-                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">Figma</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-32 relative" style="background: var(--bg-secondary);">
+    <section id="servicios" class="py-20 md:py-32 relative" style="background: var(--bg-secondary);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <div class="section-badge">Servicios Especializados</div>
-                <h2 class="text-4xl md:text-6xl font-bold">
-                    Soluciones <span class="gradient-text">Empresariales</span>
+            <div class="text-center mb-12 md:mb-20">
+                <div class="section-badge">Servicios</div>
+                <h2 class="text-3xl md:text-6xl font-bold">
+                    Lo que <span class="gradient-text">Ofrecemos</span>
                 </h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/>
-                            <path d="M8 21h8M12 17v4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Web Apps Empresariales</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        Desarrollo full-stack escalable. SPAs, PWAs, dashboards administrativos y sistemas de gestión.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">React</span>
-                        <span class="tech-badge text-xs">Node.js</span>
-                        <span class="tech-badge text-xs">PostgreSQL</span>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                        </svg></div>
+                    <h3 class="text-2xl font-bold mb-3">Web Apps</h3>
+                    <p style="color: var(--text-secondary);">Desarrollo full-stack escalable. SPAs, PWAs, dashboards
+                        administrativos.</p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <rect x="5" y="2" width="14" height="20" rx="2"/>
-                            <path d="M12 18h.01"/>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" />
+                            <path d="M12 18h.01" />
+                        </svg></div>
                     <h3 class="text-2xl font-bold mb-3">Apps Móviles</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        Apps nativas e híbridas para iOS y Android. Cross-platform con rendimiento nativo.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">React Native</span>
-                        <span class="tech-badge text-xs">Flutter</span>
-                    </div>
+                    <p style="color: var(--text-secondary);">Experiencias nativas e híbridas para iOS y Android con
+                        rendimiento óptimo.</p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        </svg></div>
                     <h3 class="text-2xl font-bold mb-3">Backend & APIs</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        APIs RESTful y GraphQL robustas. Microservicios y sistemas distribuidos de alta disponibilidad.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">Python</span>
-                        <span class="tech-badge text-xs">GraphQL</span>
-                    </div>
+                    <p style="color: var(--text-secondary);">APIs RESTful y GraphQL robustas. Arquitectura de
+                        microservicios.</p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M3 3v18h18"/>
-                            <path d="M18 17V9M13 17V5M8 17v-3"/>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18" />
+                            <path d="M18 17V9M13 17V5M8 17v-3" />
+                        </svg></div>
                     <h3 class="text-2xl font-bold mb-3">Business Intelligence</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        Dashboards interactivos, visualización de datos en tiempo real y reportes automatizados.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">D3.js</span>
-                        <span class="tech-badge text-xs">Python</span>
-                    </div>
+                    <p style="color: var(--text-secondary);">Dashboards interactivos y visualización de datos en tiempo
+                        real.</p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 16v-4M12 8h.01"/>
-                        </svg>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4M12 8h.01" />
+                        </svg></div>
                     <h3 class="text-2xl font-bold mb-3">DevOps & Cloud</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        Infraestructura como código, containerización y CI/CD pipelines para despliegue automático.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">Docker</span>
-                        <span class="tech-badge text-xs">AWS</span>
-                    </div>
+                    <p style="color: var(--text-secondary);">Infraestructura como código, Docker y pipelines CI/CD
+                        automatizados.</p>
                 </div>
                 <div class="glass-card rounded-xl p-8">
-                    <div class="service-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Integración de IA</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                        Implementación de modelos de ML, procesamiento de lenguaje natural y computer vision.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-badge text-xs">TensorFlow</span>
-                        <span class="tech-badge text-xs">OpenAI</span>
-                    </div>
+                    <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg></div>
+                    <h3 class="text-2xl font-bold mb-3">Integración IA</h3>
+                    <p style="color: var(--text-secondary);">Implementación de modelos de Machine Learning y Computer
+                        Vision.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos" class="py-32 relative">
+    <section id="proyectos" class="py-20 md:py-32 relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="mb-20">
-                <div class="section-badge">Portfolio de Proyectos</div>
-                <h2 class="text-4xl md:text-6xl font-bold">
-                    Casos de <span class="gradient-text">Éxito</span>
+            <div class="mb-12 md:mb-20">
+                <div class="section-badge">Portfolio</div>
+                <h2 class="text-3xl md:text-6xl font-bold">
+                    Nuestros <span class="gradient-text">Proyectos</span>
                 </h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card rounded-xl overflow-hidden">
-                    <div class="project-image">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--accent-primary);">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9 22 9 12 15 12 15 22"/>
+
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="glass-card rounded-xl overflow-hidden group">
+                    <div class="project-image group-hover:scale-105 transition-transform duration-500">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" style="color: var(--accent-primary);">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
                         </svg>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">E-Commerce Multivendor</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Plataforma completa con múltiples vendedores, pasarela de pagos, gestión de inventario y panel administrativo. Soporte para 10,000+ productos.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs">Next.js</span>
-                            <span class="tech-badge text-xs">Node.js</span>
-                            <span class="tech-badge text-xs">Stripe</span>
-                        </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">E-Commerce Multivendor</h3>
+                        <p style="color: var(--text-secondary);">Plataforma completa con múltiples vendedores, pasarela
+                            de pagos y gestión de inventario.</p>
+                        <div class="flex gap-2 mt-4"><span class="tech-badge text-xs">Next.js</span><span
+                                class="tech-badge text-xs">Stripe</span></div>
                     </div>
                 </div>
-                <div class="glass-card rounded-xl overflow-hidden">
-                    <div class="project-image">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--accent-secondary);">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18M9 21V9"/>
+                <div class="glass-card rounded-xl overflow-hidden group">
+                    <div class="project-image group-hover:scale-105 transition-transform duration-500">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" style="color: var(--accent-secondary);">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
                         </svg>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">Analytics Dashboard</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Sistema de análisis de datos con visualizaciones interactivas en tiempo real y alertas configurables. Procesamiento de 1M+ registros.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs">React</span>
-                            <span class="tech-badge text-xs">D3.js</span>
-                            <span class="tech-badge text-xs">Python</span>
-                        </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Analytics Dashboard</h3>
+                        <p style="color: var(--text-secondary);">Sistema de análisis de datos con visualizaciones
+                            interactivas en tiempo real.</p>
+                        <div class="flex gap-2 mt-4"><span class="tech-badge text-xs">React</span><span
+                                class="tech-badge text-xs">D3.js</span></div>
                     </div>
                 </div>
-                <div class="glass-card rounded-xl overflow-hidden">
-                    <div class="project-image">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--accent-tertiary);">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
+                <div class="glass-card rounded-xl overflow-hidden group">
+                    <div class="project-image group-hover:scale-105 transition-transform duration-500">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" style="color: var(--accent-tertiary);">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">Gestión Educativa (LMS)</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Plataforma con cursos multimedia, evaluaciones automatizadas, videoconferencias integradas y tracking de progreso.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs">Vue.js</span>
-                            <span class="tech-badge text-xs">WebRTC</span>
-                            <span class="tech-badge text-xs">MongoDB</span>
-                        </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Gestión Educativa (LMS)</h3>
+                        <p style="color: var(--text-secondary);">Plataforma con cursos multimedia, evaluaciones y
+                            tracking de progreso.</p>
+                        <div class="flex gap-2 mt-4"><span class="tech-badge text-xs">Vue.js</span><span
+                                class="tech-badge text-xs">MongoDB</span></div>
                     </div>
                 </div>
-                <div class="glass-card rounded-xl overflow-hidden">
-                    <div class="project-image">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--accent-primary);">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                <div class="glass-card rounded-xl overflow-hidden group">
+                    <div class="project-image group-hover:scale-105 transition-transform duration-500">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" style="color: var(--accent-primary);">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
                         </svg>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3">Networking Profesional</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
-                            Red social empresarial con mensajería en tiempo real, feed algorítmico y recomendaciones basadas en ML.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge text-xs">React Native</span>
-                            <span class="tech-badge text-xs">GraphQL</span>
-                            <span class="tech-badge text-xs">Socket.io</span>
-                        </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3">Networking Profesional</h3>
+                        <p style="color: var(--text-secondary);">Red social empresarial con mensajería y recomendaciones
+                            ML.</p>
+                        <div class="flex gap-2 mt-4"><span class="tech-badge text-xs">React Native</span><span
+                                class="tech-badge text-xs">GraphQL</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="equipo" class="py-32 relative" style="background: var(--bg-secondary);">
+    <section id="equipo" class="py-20 md:py-32 relative" style="background: var(--bg-secondary);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <div class="section-badge">Nuestro Equipo</div>
-                <h2 class="text-4xl md:text-6xl font-bold">
-                    Ingenieros <span class="gradient-text">Especializados</span>
+            <div class="text-center mb-12 md:mb-20">
+                <div class="section-badge">Deep Line Team</div>
+                <h2 class="text-3xl md:text-6xl font-bold">
+                    El <span class="gradient-text">Equipo</span>
                 </h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #3B82F6, #8B5CF6);">AR</div>
-                    <h3 class="text-xl font-bold mb-2">Alejandro R.</h3>
-                    <p class="font-medium mb-3 gradient-text">Lead Engineer</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <div class="team-avatar mx-auto mb-4"
+                        style="background: linear-gradient(135deg, #3B82F6, #8B5CF6); width: 8rem; height: 8rem; font-size: 2.5rem;">
+                        EC</div>
+                    <h3 class="text-lg font-bold mb-1">Eduard Chambilla</h3>
+                    <p class="text-sm font-medium gradient-text mb-3">Software Engineer</p>
                 </div>
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #8B5CF6, #EC4899);">SC</div>
-                    <h3 class="text-xl font-bold mb-2">Sofía C.</h3>
-                    <p class="font-medium mb-3 gradient-text">UX/UI Lead</p>
+
+                <div class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <div class="team-avatar mx-auto mb-4"
+                        style="background: linear-gradient(135deg, #8B5CF6, #EC4899); width: 8rem; height: 8rem; font-size: 2.5rem;">
+                        FI</div>
+                    <h3 class="text-lg font-bold mb-1">Fernando Istaña</h3>
+                    <p class="text-sm font-medium gradient-text mb-3">Software Engineer</p>
                 </div>
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #06B6D4, #3B82F6);">MJ</div>
-                    <h3 class="text-xl font-bold mb-2">Miguel J.</h3>
-                    <p class="font-medium mb-3 gradient-text">Backend Arch</p>
+
+                <div class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <div class="team-avatar mx-auto mb-4"
+                        style="background: linear-gradient(135deg, #06B6D4, #3B82F6); width: 8rem; height: 8rem; font-size: 2.5rem;">
+                        AM</div>
+                    <h3 class="text-lg font-bold mb-1">Andrey Mestanza</h3>
+                    <p class="text-sm font-medium gradient-text mb-3">Software Engineer</p>
                 </div>
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #10B981, #06B6D4);">MP</div>
-                    <h3 class="text-xl font-bold mb-2">María P.</h3>
-                    <p class="font-medium mb-3 gradient-text">DevOps</p>
+
+                <div class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <div class="team-avatar mx-auto mb-4"
+                        style="background: linear-gradient(135deg, #10B981, #06B6D4); width: 8rem; height: 8rem; font-size: 2.5rem;">
+                        JP</div>
+                    <h3 class="text-lg font-bold mb-1">Jhonsons Plasencia</h3>
+                    <p class="text-sm font-medium gradient-text mb-3">Software Engineer</p>
                 </div>
-                <div class="glass-card rounded-xl p-6 text-center">
-                    <div class="team-avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">LT</div>
-                    <h3 class="text-xl font-bold mb-2">Luis T.</h3>
-                    <p class="font-medium mb-3 gradient-text">AI Specialist</p>
+
+                <div class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <div class="team-avatar mx-auto mb-4"
+                        style="background: linear-gradient(135deg, #F59E0B, #EF4444); width: 8rem; height: 8rem; font-size: 2.5rem;">
+                        PA</div>
+                    <h3 class="text-lg font-bold mb-1">Pedro Alva</h3>
+                    <p class="text-sm font-medium gradient-text mb-3">Software Engineer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-32 relative">
+    <section id="contacto" class="py-20 md:py-32 relative">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16">
                 <div class="section-badge">Contacto</div>
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                    Iniciemos su <span class="gradient-text">Proyecto</span>
+                <h2 class="text-3xl md:text-6xl font-bold mb-6">
+                    Iniciemos un <span class="gradient-text">Proyecto</span>
                 </h2>
-                <p class="text-xl" style="color: var(--text-secondary);">
-                    Cuéntenos sobre sus objetivos y le responderemos en menos de 24 horas.
+                <p class="text-lg md:text-xl" style="color: var(--text-secondary);">
+                    ¿Tienes una idea? Nosotros tenemos el código para hacerla realidad.
                 </p>
             </div>
-            
-            <div class="glass-card rounded-2xl p-8 md:p-12">
+
+            <div class="glass-card rounded-2xl p-6 md:p-12">
                 <form>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <label class="block text-sm font-medium mb-2">Nombre Completo *</label>
-                            <input type="text" placeholder="Juan Pérez" class="w-full px-4 py-3 rounded-lg" required>
+                            <label class="block text-sm font-medium mb-2">Nombre</label>
+                            <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">Email Corporativo *</label>
-                            <input type="email" placeholder="juan@empresa.com" class="w-full px-4 py-3 rounded-lg" required>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" placeholder="tucorreo@ejemplo.com" class="w-full px-4 py-3 rounded-lg"
+                                required>
                         </div>
                     </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Empresa</label>
-                            <input type="text" placeholder="Nombre de la empresa" class="w-full px-4 py-3 rounded-lg">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Servicio *</label>
-                            <select class="w-full px-4 py-3 rounded-lg" required>
-                                <option value="">Seleccione una opción</option>
-                                <option>Desarrollo Web Full-Stack</option>
-                                <option>Aplicación Móvil</option>
-                                <option>Backend & APIs</option>
-                                <option>Consultoría Técnica</option>
-                            </select>
-                        </div>
-                    </div>
-                    
+
                     <div class="mb-6">
-                        <label class="block text-sm font-medium mb-2">Descripción del Proyecto *</label>
-                        <textarea placeholder="Describa los objetivos, funcionalidades clave y timeline esperado..." rows="5" class="w-full px-4 py-3 rounded-lg resize-none" required></textarea>
+                        <label class="block text-sm font-medium mb-2">Mensaje</label>
+                        <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5"
+                            class="w-full px-4 py-3 rounded-lg resize-none" required></textarea>
                     </div>
-                    
+
                     <button type="submit" class="w-full px-8 py-4 rounded-xl btn-primary text-lg">
-                        Enviar Solicitud
+                        Enviar Mensaje
                     </button>
                 </form>
             </div>
@@ -529,41 +465,29 @@
     <footer class="py-12 border-t" style="border-color: var(--border-color); background: var(--bg-primary);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-6 md:mb-0 text-center md:text-left">
-                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">
-                        <div class="w-8 h-8 rounded-md bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center font-bold text-white text-sm">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5"/>
-                                <path d="M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <span class="text-lg font-bold gradient-text">NexDev Studio</span>
-                    </div>
-                    <p class="text-sm max-w-xs mx-auto md:mx-0" style="color: var(--text-secondary);">
-                        Ingeniería de software de precisión para empresas que buscan escalar.
-                    </p>
+                <div class="mb-6 md:mb-0 flex items-center space-x-2">
+                    <span class="text-lg font-bold gradient-text">Deep Line Software</span>
                 </div>
-                
-                <div class="flex flex-wrap justify-center gap-8">
-                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Proyectos</a>
-                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Servicios</a>
-                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors" style="color: var(--text-secondary);">Privacidad</a>
+
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors"
+                        style="color: var(--text-secondary);">Inicio</a>
+                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors"
+                        style="color: var(--text-secondary);">Proyectos</a>
+                    <a href="#" class="text-sm font-medium hover:text-blue-500 transition-colors"
+                        style="color: var(--text-secondary);">Contacto</a>
                 </div>
             </div>
-            
-            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t" style="border-color: var(--border-color);">
-                <p class="text-sm mb-4 md:mb-0" style="color: var(--text-tertiary);">
-                    &copy; 2024 NexDev Studio. Todos los derechos reservados.
+
+            <div class="text-center border-t pt-8" style="border-color: var(--border-color);">
+                <p class="text-xs md:text-sm" style="color: var(--text-tertiary);">
+                    &copy; 2024 Deep Line Software. Desarrollado en Perú.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors">GitHub</a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
-                </div>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

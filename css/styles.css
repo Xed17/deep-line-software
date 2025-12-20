@@ -292,27 +292,6 @@ input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-.social-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-}
-
-.social-link:hover {
-    border-color: var(--accent-primary);
-    color: var(--accent-primary);
-    background: var(--bg-secondary);
-}
-
 .glow-effect {
     position: absolute;
     width: 500px;
@@ -322,4 +301,30 @@ input:focus, textarea:focus, select:focus {
     opacity: 0.1;
     pointer-events: none;
     z-index: 0;
+}
+
+/* === LOGO TOGGLE UTILITIES === */
+.logo-light { display: none; }
+.logo-dark { display: block; }
+
+[data-theme="light"] .logo-light { display: block; }
+[data-theme="light"] .logo-dark { display: none; }
+
+/* === RESPONSIVE UTILITIES === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    h2 {
+        font-size: 2rem !important;
+    }
+    section {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    #mobile-menu {
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+    }
 }
