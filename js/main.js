@@ -1,0 +1,105 @@
+/**
+ * NexDev Studio - Main Application Logic
+ * * Contiene:
+ * 1. Lógica de cambio de tema (Claro/Oscuro)
+ * 2. Barra de progreso de lectura (Scroll Progress)
+ * 3. Navegación móvil
+ * 4. Scroll suave (Smooth Scroll)
+ * 5. Animaciones de entrada (Intersection Observer)
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Theme Toggle Logic ---
+    const html = document.documentElement;
+    // Nota: El script anti-flash en el head ya seteó el atributo inicial
+
+    window.toggleTheme = function() {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    };
+
+    // --- 2. Scroll Progress Bar (Optimized) ---
+    const scrollProgress = document.getElementById('scrollProgress');
+    let isScrolling = false;
+
+    function updateProgressBar() {
+        const scrollPx = document.documentElement.scrollTop;
+        const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
+        
+        if (scrollProgress) {
+            scrollProgress.style.width = scrolled;
+        }
+        isScrolling = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(updateProgressBar);
+            isScrolling = true;
+        }
+    });
+
+    // --- 3. Mobile Menu Logic ---
+    const btnMobile = document.getElementById('mobile-menu-btn');
+    const menuMobile = document.getElementById('mobile-menu');
+
+    if (btnMobile && menuMobile) {
+        btnMobile.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            menuMobile.classList.toggle('flex');
+        });
+        
+        // Cerrar menú al hacer click en links
+        menuMobile.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+                menuMobile.classList.remove('flex');
+            });
+        });
+    }
+
+    // --- 4. Smooth Scroll for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // --- 5. Intersection Observer (Fade In Animations) ---
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                observer.unobserve(entry.target); // Animar solo una vez
+            }
+        });
+    }, observerOptions);
+
+    // Seleccionar elementos a animar que no tengan ya la clase (si se cargó estático)
+    const elementsToAnimate = document.querySelectorAll('.glass-card, .section-badge, .stat-card, .project-image, .tech-badge');
+    
+    elementsToAnimate.forEach((el, index) => {
+        // Forzar opacidad inicial 0 vía JS para asegurar la animación
+        el.style.opacity = '0';
+        // Añadir pequeño delay escalonado si están en grupo (opcional)
+        // el.style.animationDelay = `${index * 0.05}s`; 
+        observer.observe(el);
+    });
+});
