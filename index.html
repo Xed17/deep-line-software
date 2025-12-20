@@ -39,20 +39,19 @@
     <div class="glow-effect" style="background: var(--accent-secondary); top: 40%; right: -10%;"></div>
     <div class="glow-effect" style="background: var(--accent-tertiary); bottom: -10%; left: 30%;"></div>
 
-    <nav class="fixed w-full z-50 glass-card border-t-0 border-x-0">
+    <nav class="fixed w-full z-50 glass-card border-t-0 border-x-0 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
 
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 flex items-center justify-center">
+                    <div class="w-12 h-12 flex items-center justify-center">
                         <img src="assets/img/isotipo_dark.png" alt="Deep Line Logo"
                             class="logo-dark h-full w-full object-contain">
-
                         <img src="assets/img/isotipo_light.png" alt="Deep Line Logo"
                             class="logo-light h-full w-full object-contain">
                     </div>
 
-                    <div class="hidden sm:block">
+                    <div class="hidden md:block">
                         <span class="text-xl font-bold gradient-text">Deep Line</span>
                     </div>
                 </div>
@@ -69,7 +68,8 @@
                     </div>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none">
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 focus:outline-none">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -79,8 +79,7 @@
         </div>
 
         <div id="mobile-menu"
-            class="hidden absolute top-20 left-0 w-full border-t border-gray-800 p-6 md:hidden flex-col space-y-6 shadow-2xl z-50"
-            style="background: var(--bg-primary);">
+            class="hidden absolute top-20 left-0 w-full border-b border-gray-800 p-6 md:hidden flex-col space-y-6 shadow-2xl z-50 glass-card">
             <a href="#inicio" class="block text-lg font-medium hover:text-blue-500 transition-colors"
                 style="color: var(--text-primary);">Inicio</a>
             <a href="#nosotros" class="block text-lg font-medium hover:text-blue-500 transition-colors"
@@ -93,7 +92,7 @@
                 style="color: var(--text-primary);">Equipo</a>
             <a href="#contacto" class="block text-lg font-medium hover:text-blue-500 transition-colors"
                 style="color: var(--text-primary);">Contacto</a>
-            <div class="pt-4 border-t border-gray-700 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-500/30 flex items-center justify-between">
                 <span class="text-sm font-medium" style="color: var(--text-secondary);">Cambiar Tema</span>
                 <div class="theme-toggle" onclick="toggleTheme()">
                     <div class="theme-toggle-circle"></div>
@@ -102,10 +101,10 @@
         </div>
     </nav>
 
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center py-20 md:pt-20">
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-36 pb-20 md:pt-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
             <div class="section-badge fade-in-up">Innovación & Desarrollo</div>
-            <h1 class="text-4xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight fade-in-up"
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight fade-in-up"
                 style="animation-delay: 0.1s;">
                 Código Profundo,<br />
                 <span class="gradient-text">Soluciones Reales</span>
@@ -116,8 +115,9 @@
                 del desarrollo moderno para crear experiencias digitales que impactan.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 fade-in-up" style="animation-delay: 0.3s;">
-                <button class="px-8 py-4 rounded-xl btn-primary w-full sm:w-auto">Ver Proyectos</button>
-                <button class="px-8 py-4 rounded-xl btn-secondary w-full sm:w-auto">Contactar Equipo</button>
+                <button class="w-full sm:w-auto px-8 py-4 rounded-xl btn-primary shadow-lg hover:shadow-blue-500/30">Ver
+                    Proyectos</button>
+                <button class="w-full sm:w-auto px-8 py-4 rounded-xl btn-secondary">Contactar Equipo</button>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto fade-in-up"

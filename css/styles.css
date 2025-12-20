@@ -8,9 +8,12 @@
     --text-primary: #FFFFFF;
     --text-secondary: #9CA3AF;
     --text-tertiary: #6B7280;
-    --accent-primary: #3B82F6;    /* Blue 500 */
-    --accent-secondary: #8B5CF6;  /* Violet 500 */
-    --accent-tertiary: #06B6D4;   /* Cyan 500 */
+    --accent-primary: #3B82F6;
+    /* Blue 500 */
+    --accent-secondary: #8B5CF6;
+    /* Violet 500 */
+    --accent-tertiary: #06B6D4;
+    /* Cyan 500 */
     --border-color: rgba(255, 255, 255, 0.08);
     --card-bg: rgba(28, 29, 36, 0.7);
 }
@@ -261,6 +264,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -279,14 +283,18 @@ body {
 }
 
 /* Form Inputs Focus States */
-input, textarea, select {
+input,
+textarea,
+select {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
     transition: all 0.3s;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
     border-color: var(--accent-primary);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
@@ -304,11 +312,21 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* === LOGO TOGGLE UTILITIES === */
-.logo-light { display: none; }
-.logo-dark { display: block; }
+.logo-light {
+    display: none;
+}
 
-[data-theme="light"] .logo-light { display: block; }
-[data-theme="light"] .logo-dark { display: none; }
+.logo-dark {
+    display: block;
+}
+
+[data-theme="light"] .logo-light {
+    display: block;
+}
+
+[data-theme="light"] .logo-dark {
+    display: none;
+}
 
 /* === RESPONSIVE UTILITIES === */
 @media (max-width: 768px) {
@@ -316,15 +334,59 @@ input:focus, textarea:focus, select:focus {
         font-size: 2.5rem !important;
         line-height: 1.2 !important;
     }
+
     h2 {
         font-size: 2rem !important;
     }
+
     section {
         padding-top: 5rem !important;
         padding-bottom: 5rem !important;
     }
+
     #mobile-menu {
         background: var(--bg-primary);
         border-bottom: 1px solid var(--border-color);
+    }
+}
+
+/* === AJUSTES RESPONSIVE AVANZADOS === */
+
+@media (max-width: 768px) {
+
+    /* 1. Controlar el tamaño del título principal para que no rompa la pantalla */
+    h1 {
+        font-size: 2.75rem !important;
+        line-height: 1.15 !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* 2. Reducir la intensidad del Glow en móviles */
+    /* En tu foto se ve que el brillo tapa mucho el fondo blanco, esto lo suaviza */
+    .glow-effect {
+        opacity: 0.4 !important;
+        /* Más suave */
+        width: 300px !important;
+        /* Más pequeño */
+        height: 300px !important;
+        filter: blur(60px) !important;
+        /* Menos blur para rendimiento */
+    }
+
+    /* 3. Ajustes de espaciado general */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* 4. Menú móvil más legible */
+    #mobile-menu {
+        background: var(--bg-primary);
+        /* Fondo sólido si el glass falla */
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     }
 }
