@@ -39,12 +39,18 @@
     box-sizing: border-box;
 }
 
+/* === CORRECCIÓN GLOBAL CRÍTICA === */
+html,
 body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Corta el espacio sobrante lateral */
+    position: relative;
     font-family: 'Inter', sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     transition: background 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
     line-height: 1.6;
 }
 
@@ -309,6 +315,8 @@ select:focus {
     opacity: 0.1;
     pointer-events: none;
     z-index: 0;
+    /* IMPORTANTE: Evita que el brillo expanda la pantalla */
+    max-width: 100vw;
 }
 
 /* === LOGO TOGGLE UTILITIES === */
@@ -328,33 +336,10 @@ select:focus {
     display: none;
 }
 
-/* === RESPONSIVE UTILITIES === */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2 !important;
-    }
-
-    h2 {
-        font-size: 2rem !important;
-    }
-
-    section {
-        padding-top: 5rem !important;
-        padding-bottom: 5rem !important;
-    }
-
-    #mobile-menu {
-        background: var(--bg-primary);
-        border-bottom: 1px solid var(--border-color);
-    }
-}
-
-/* === AJUSTES RESPONSIVE AVANZADOS === */
-
+/* === RESPONSIVE UTILITIES UNIFICADOS === */
 @media (max-width: 768px) {
 
-    /* 1. Controlar el tamaño del título principal para que no rompa la pantalla */
+    /* 1. Tipografía móvil */
     h1 {
         font-size: 2.75rem !important;
         line-height: 1.15 !important;
@@ -362,31 +347,50 @@ select:focus {
         padding-right: 0.5rem;
     }
 
-    /* 2. Reducir la intensidad del Glow en móviles */
-    /* En tu foto se ve que el brillo tapa mucho el fondo blanco, esto lo suaviza */
-    .glow-effect {
-        opacity: 0.4 !important;
-        /* Más suave */
-        width: 300px !important;
-        /* Más pequeño */
-        height: 300px !important;
-        filter: blur(60px) !important;
-        /* Menos blur para rendimiento */
+    h2 {
+        font-size: 2rem !important;
     }
 
-    /* 3. Ajustes de espaciado general */
+    /* 2. Espaciado y Contenedores */
     section {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
 
-    /* 4. Menú móvil más legible */
+    .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* 3. Menú Móvil Full Width (Arregla el recorte) */
     #mobile-menu {
+        width: 100vw !important;
+        /* Ancho completo */
+        left: 0 !important;
+        right: 0 !important;
         background: var(--bg-primary);
-        /* Fondo sólido si el glass falla */
+        /* Fallback sólido */
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    /* 4. Visibilidad de Texto de Marca en Móvil */
+    .brand-text {
+        display: block !important;
+        margin-left: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    /* 5. Optimización de Brillo en Móvil */
+    .glow-effect {
+        opacity: 0.4 !important;
+        width: 300px !important;
+        height: 300px !important;
+        filter: blur(60px) !important;
     }
 }

@@ -39,20 +39,20 @@
     <div class="glow-effect" style="background: var(--accent-secondary); top: 40%; right: -10%;"></div>
     <div class="glow-effect" style="background: var(--accent-tertiary); bottom: -10%; left: 30%;"></div>
 
-    <nav class="fixed w-full z-50 glass-card border-t-0 border-x-0 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-t-0 border-x-0">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
             <div class="flex justify-between items-center h-20">
 
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 flex items-center justify-center">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center">
                         <img src="assets/img/isotipo_dark.png" alt="Deep Line Logo"
                             class="logo-dark h-full w-full object-contain">
                         <img src="assets/img/isotipo_light.png" alt="Deep Line Logo"
                             class="logo-light h-full w-full object-contain">
                     </div>
 
-                    <div class="hidden md:block">
-                        <span class="text-xl font-bold gradient-text">Deep Line</span>
+                    <div class="ml-3 block">
+                        <span class="text-lg font-bold gradient-text leading-tight block">Deep Line</span>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                 </div>
 
                 <button id="mobile-menu-btn"
-                    class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 focus:outline-none">
+                    class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 focus:outline-none -mr-2">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -79,20 +79,13 @@
         </div>
 
         <div id="mobile-menu"
-            class="hidden absolute top-20 left-0 w-full border-b border-gray-800 p-6 md:hidden flex-col space-y-6 shadow-2xl z-50 glass-card">
+            class="hidden absolute top-20 left-0 right-0 w-full border-b border-gray-800 p-6 md:hidden flex-col space-y-6 shadow-2xl z-50 glass-card"
+            style="background: var(--bg-primary);">
             <a href="#inicio" class="block text-lg font-medium hover:text-blue-500 transition-colors"
                 style="color: var(--text-primary);">Inicio</a>
-            <a href="#nosotros" class="block text-lg font-medium hover:text-blue-500 transition-colors"
-                style="color: var(--text-primary);">Nosotros</a>
-            <a href="#servicios" class="block text-lg font-medium hover:text-blue-500 transition-colors"
-                style="color: var(--text-primary);">Servicios</a>
-            <a href="#proyectos" class="block text-lg font-medium hover:text-blue-500 transition-colors"
-                style="color: var(--text-primary);">Portfolio</a>
-            <a href="#equipo" class="block text-lg font-medium hover:text-blue-500 transition-colors"
-                style="color: var(--text-primary);">Equipo</a>
             <a href="#contacto" class="block text-lg font-medium hover:text-blue-500 transition-colors"
                 style="color: var(--text-primary);">Contacto</a>
-            <div class="pt-4 border-t border-gray-500/30 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-700/50 flex items-center justify-between">
                 <span class="text-sm font-medium" style="color: var(--text-secondary);">Cambiar Tema</span>
                 <div class="theme-toggle" onclick="toggleTheme()">
                     <div class="theme-toggle-circle"></div>
