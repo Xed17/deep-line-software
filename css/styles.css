@@ -442,3 +442,18 @@ select:focus {
         right: 1.5rem;
     }
 }
+
+/* === TYPEWRITER CURSOR === */
+.cursor {
+    display: inline-block;
+    font-weight: 100;
+    color: var(--accent-primary); /* Color del cursor igual al tema */
+    animation: blink 1s infinite;
+    margin-left: 4px;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

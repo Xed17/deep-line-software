@@ -9,15 +9,15 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- 1. Theme Toggle Logic ---
     const html = document.documentElement;
     // Nota: El script anti-flash en el head ya seteó el atributo inicial
 
-    window.toggleTheme = function() {
+    window.toggleTheme = function () {
         const currentTheme = html.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
+
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
     };
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPx = document.documentElement.scrollTop;
         const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
-        
+
         if (scrollProgress) {
             scrollProgress.style.width = scrolled;
         }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuMobile.classList.toggle('hidden');
             menuMobile.classList.toggle('flex');
         });
-        
+
         // Cerrar menú al hacer click en links
         menuMobile.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Seleccionar elementos a animar que no tengan ya la clase (si se cargó estático)
     const elementsToAnimate = document.querySelectorAll('.glass-card, .section-badge, .stat-card, .project-image, .tech-badge');
-    
+
     elementsToAnimate.forEach((el, index) => {
         // Forzar opacidad inicial 0 vía JS para asegurar la animación
         el.style.opacity = '0';
@@ -102,4 +102,80 @@ document.addEventListener('DOMContentLoaded', () => {
         // el.style.animationDelay = `${index * 0.05}s`; 
         observer.observe(el);
     });
+    // ... (Tu código anterior del menú, scroll, etc.) ...
+
+    // --- 6. Typewriter Effect (Máquina de Escribir) ---
+    const typewriterElement = document.getElementById('typewriter');
+
+    if (typewriterElement) {
+        const phrases = [
+            "Soluciones Reales",
+            "Apps Móviles",
+            "Software a Medida",
+            "Experiencias Únicas"
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100; // Velocidad al escribir
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                // Borrando
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Borra más rápido
+            } else {
+                // Escribiendo
+                typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Escribe a velocidad normal
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                // Frase completa, esperar antes de borrar
+                isDeleting = true;
+                typeSpeed = 2000; // Pausa de 2 segundos al terminar la frase
+            } else if (isDeleting && charIndex === 0) {
+                // Frase borrada completa, pasar a la siguiente
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length; // Bucle infinito
+                typeSpeed = 500; // Pequeña pausa antes de empezar la nueva
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Iniciar el efecto
+        type();
+    }
+    // ... tu código anterior ...
+
+    // --- 6. Scroll To Top Logic (Robust) ---
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            // Si bajamos más de 300px
+            if (window.scrollY > 300) {
+                // Hacemos visible el botón
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                // Ocultamos el botón (bajándolo y haciéndolo transparente)
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
