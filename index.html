@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Deep Line Software | Desarrollo de Software y Soluciones Digitales</title>
+    <link rel="icon" type="image/png" href="assets/img/isotipo_light.png">
+    <link rel="apple-touch-icon" href="assets/img/isotipo_light.png">
     <meta name="description"
         content="Deep Line Software: Equipo de desarrollo de software en Perú. Especialistas en ingeniería web, aplicaciones móviles y transformación digital.">
     <meta name="keywords"
@@ -61,6 +63,8 @@
                     <a href="#nosotros" class="nav-link">Nosotros</a>
                     <a href="#servicios" class="nav-link">Servicios</a>
                     <a href="#proyectos" class="nav-link">Portfolio</a>
+                    <a href="#proceso" class="nav-link">Metodología</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
                     <a href="#equipo" class="nav-link">Equipo</a>
                     <a href="#contacto" class="nav-link">Contacto</a>
                     <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0">
@@ -94,23 +98,53 @@
         </div>
     </nav>
 
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-36 pb-20 md:pt-32">
+    <section id="inicio" class="relative min-h-[100dvh] flex items-center justify-center pt-36 pb-20 md:pt-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
             <div class="section-badge fade-in-up">Innovación & Desarrollo</div>
             <h1 class="text-4xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight fade-in-up"
                 style="animation-delay: 0.1s;">
                 Código Profundo,<br />
-                <span class="gradient-text" id="typewriter"></span><span class="cursor">|</span>
+
+                <div class="typewriter-wrapper">
+                    <span class="gradient-text" id="typewriter"></span>
+                </div>
             </h1>
             <p class="text-lg md:text-2xl mb-12 max-w-4xl mx-auto fade-in-up"
                 style="color: var(--text-secondary); font-weight: 400; animation-delay: 0.2s;">
                 En <strong>Deep Line Software</strong> combinamos el rigor académico de la ingeniería con la agilidad
                 del desarrollo moderno para crear experiencias digitales que impactan.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 fade-in-up" style="animation-delay: 0.3s;">
-                <button class="w-full sm:w-auto px-8 py-4 rounded-xl btn-primary shadow-lg hover:shadow-blue-500/30">Ver
-                    Proyectos</button>
-                <button class="w-full sm:w-auto px-8 py-4 rounded-xl btn-secondary">Contactar Equipo</button>
+            <div class="flex flex-col items-center justify-center mb-20 fade-in-up" style="animation-delay: 0.3s;">
+
+                <a href="#contacto"
+                    class="px-10 py-4 rounded-xl btn-primary shadow-xl hover:shadow-blue-500/30 text-lg font-bold mb-6">
+                    Solicitar Presupuesto
+                </a>
+
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-medium"
+                    style="color: var(--text-secondary);">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Soporte Incluido
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Pagos en Cuotas
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        Garantía de Calidad
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto fade-in-up"
@@ -361,7 +395,227 @@
             </div>
         </div>
     </section>
+    <section id="proceso" class="py-20 md:py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="section-badge">Metodología</div>
+                <h2 class="text-3xl md:text-6xl font-bold">
+                    Cómo <span class="gradient-text">Trabajamos</span>
+                </h2>
+            </div>
 
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 md:-ml-0.5"
+                    style="background-color: var(--text-tertiary); opacity: 0.3;"></div>
+
+                <div class="relative mb-12 md:mb-20">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0 w-full pl-12 md:pl-0">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">1. Descubrimiento
+                            </h3>
+                            <p class="text-sm" style="color: var(--text-secondary);">Analizamos tus requerimientos,
+                                definimos el alcance y trazamos la arquitectura técnica del proyecto.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full border-4 z-10 flex items-center justify-center md:-ml-4 bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                            style="border-color: var(--bg-primary);">
+                            <span class="text-xs font-bold text-white">1</span>
+                        </div>
+                        <div class="flex-1 md:pl-12 hidden md:block"></div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 md:mb-20">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:pr-12 hidden md:block"></div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full border-4 z-10 flex items-center justify-center md:-ml-4 bg-purple-600 shadow-[0_0_15px_rgba(139,92,246,0.5)]"
+                            style="border-color: var(--bg-primary);">
+                            <span class="text-xs font-bold text-white">2</span>
+                        </div>
+                        <div class="flex-1 md:pl-12 w-full pl-12 md:pl-0">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">2. Diseño UI/UX</h3>
+                            <p class="text-sm" style="color: var(--text-secondary);">Creamos prototipos interactivos en
+                                Figma. Priorizamos la experiencia de usuario antes de escribir código.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 md:mb-20">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:text-right md:pr-12 mb-4 md:mb-0 w-full pl-12 md:pl-0">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">3. Desarrollo Ágil
+                            </h3>
+                            <p class="text-sm" style="color: var(--text-secondary);">Programación en sprints semanales.
+                                Recibes avances constantes y tienes control total del progreso.</p>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full border-4 z-10 flex items-center justify-center md:-ml-4 bg-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.5)]"
+                            style="border-color: var(--bg-primary);">
+                            <span class="text-xs font-bold text-white">3</span>
+                        </div>
+                        <div class="flex-1 md:pl-12 hidden md:block"></div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="flex-1 md:pr-12 hidden md:block"></div>
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full border-4 z-10 flex items-center justify-center md:-ml-4 bg-green-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+                            style="border-color: var(--bg-primary);">
+                            <span class="text-xs font-bold text-white">4</span>
+                        </div>
+                        <div class="flex-1 md:pl-12 w-full pl-12 md:pl-0">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">4. Despliegue &
+                                Soporte</h3>
+                            <p class="text-sm" style="color: var(--text-secondary);">Lanzamiento a producción en
+                                servidores seguros. Incluimos garantía y soporte post-lanzamiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 relative" style="background: var(--bg-secondary);">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="section-badge">Dudas Comunes</div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Preguntas Frecuentes</h2>
+                <p class="text-lg" style="color: var(--text-secondary);">
+                    Todo lo que necesitas saber antes de iniciar.
+                </p>
+            </div>
+
+            <div class="grid gap-6">
+
+                <div
+                    class="glass-card rounded-2xl overflow-hidden faq-item cursor-pointer group transition-all duration-300 hover:-translate-y-1">
+                    <div class="p-6 md:p-8 flex items-center justify-between faq-header">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg md:text-xl select-none" style="color: var(--text-primary);">
+                                ¿Cuánto tiempo toma desarrollar?
+                            </h3>
+                        </div>
+                        <svg class="w-6 h-6 transform transition-transform duration-300"
+                            style="color: var(--text-tertiary);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 md:px-8 pb-8 pl-[5.5rem] md:pl-[6.5rem] text-base leading-relaxed"
+                            style="color: var(--text-secondary);">
+                            El tiempo varía según la complejidad:
+                            <ul class="list-disc mt-2 ml-4 space-y-1">
+                                <li><strong>Landing Page:</strong> 5 a 7 días hábiles.</li>
+                                <li><strong>Web Corporativa:</strong> 2 a 3 semanas.</li>
+                                <li><strong>Sistema/App:</strong> 4 a 8 semanas.</li>
+                            </ul>
+                            <p class="mt-2 text-sm italic opacity-80">Entregamos un cronograma detallado el primer día.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl overflow-hidden faq-item cursor-pointer group transition-all duration-300 hover:-translate-y-1">
+                    <div class="p-6 md:p-8 flex items-center justify-between faq-header">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-purple-500/10 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg md:text-xl select-none" style="color: var(--text-primary);">
+                                ¿Incluyen Hosting y Dominio?
+                            </h3>
+                        </div>
+                        <svg class="w-6 h-6 transform transition-transform duration-300"
+                            style="color: var(--text-tertiary);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 md:px-8 pb-8 pl-[5.5rem] md:pl-[6.5rem] text-base leading-relaxed"
+                            style="color: var(--text-secondary);">
+                            <strong>Sí, lo hacemos fácil.</strong> Te asesoramos en la compra del dominio (tu nombre en
+                            internet) y configuramos el hosting. Para sitios informativos, a menudo podemos ofrecer
+                            <strong>alojamiento gratuito</strong> de alto rendimiento.
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl overflow-hidden faq-item cursor-pointer group transition-all duration-300 hover:-translate-y-1">
+                    <div class="p-6 md:p-8 flex items-center justify-between faq-header">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-cyan-500/10 text-cyan-500 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg md:text-xl select-none" style="color: var(--text-primary);">
+                                ¿Cómo es la forma de pago?
+                            </h3>
+                        </div>
+                        <svg class="w-6 h-6 transform transition-transform duration-300"
+                            style="color: var(--text-tertiary);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 md:px-8 pb-8 pl-[5.5rem] md:pl-[6.5rem] text-base leading-relaxed"
+                            style="color: var(--text-secondary);">
+                            Trabajamos con un esquema de confianza <strong>50/50</strong>:
+                            <br><br>
+                            1. <strong>50% de adelanto</strong> para iniciar el diseño y desarrollo.
+                            <br>
+                            2. <strong>50% contra entrega</strong>, una vez que apruebes el proyecto final funcionando.
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl overflow-hidden faq-item cursor-pointer group transition-all duration-300 hover:-translate-y-1">
+                    <div class="p-6 md:p-8 flex items-center justify-between faq-header">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-green-500/10 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg md:text-xl select-none" style="color: var(--text-primary);">
+                                ¿Ofrecen soporte post-entrega?
+                            </h3>
+                        </div>
+                        <svg class="w-6 h-6 transform transition-transform duration-300"
+                            style="color: var(--text-tertiary);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 md:px-8 pb-8 pl-[5.5rem] md:pl-[6.5rem] text-base leading-relaxed"
+                            style="color: var(--text-secondary);">
+                            ¡Por supuesto! No te abandonamos. Todos nuestros proyectos incluyen <strong>30 días de
+                                garantía gratuita</strong> para corregir cualquier error técnico. También ofrecemos
+                            planes de mantenimiento mensual si necesitas actualizaciones frecuentes.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section id="equipo" class="py-20 md:py-32 relative" style="background: var(--bg-secondary);">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-20">
@@ -480,7 +734,7 @@
         </div>
 
     </footer>
-    <a href="https://wa.me/51900000000?text=Hola%20Deep%20Line" class="whatsapp-float" target="_blank"
+    <a href="https://wa.me/51925694790?text=Hola%20Deep%20Line" class="whatsapp-float" target="_blank"
         rel="noopener noreferrer" aria-label="Chat en WhatsApp">
         <svg viewBox="0 0 32 32" class="whatsapp-icon-svg" fill="white" width="34" height="34">
             <path

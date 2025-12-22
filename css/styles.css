@@ -91,6 +91,16 @@ body {
     letter-spacing: 0.02em;
 }
 
+/* === SCROLLSPY ACTIVE STATE === */
+.nav-link.active {
+    color: var(--text-primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+    /* La línea azul se queda fija */
+}
+
 .nav-link:hover {
     color: var(--text-primary);
 }
@@ -447,13 +457,89 @@ select:focus {
 .cursor {
     display: inline-block;
     font-weight: 100;
-    color: var(--accent-primary); /* Color del cursor igual al tema */
+    color: var(--accent-primary);
+    /* Color del cursor igual al tema */
     animation: blink 1s infinite;
     margin-left: 4px;
     vertical-align: baseline;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
+
+/* === CORRECCIÓN SALTO TYPEWRITER === */
+/* === TYPEWRITER WRAPPER (CORREGIDO PARA MÓVIL) === */
+.typewriter-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1.2em;
+    /* Altura mínima en escritorio */
+}
+
+/* === EL CURSOR (CORREGIDO) === */
+#typewriter::after {
+    content: '|';
+    display: inline-block;
+    font-weight: 400;
+    /* Un poco más grueso para que se vea bien */
+    margin-left: 4px;
+
+    /* 1. Definimos el color */
+    color: var(--accent-primary);
+
+    /* 2. IMPORTANTE: Sobrescribimos la transparencia del gradiente */
+    /* Esto le dice al navegador: "No pintes esto transparente, píntalo del color definido arriba" */
+    -webkit-text-fill-color: var(--accent-primary);
+
+    animation: blink 1s infinite;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* === RESPONSIVE AJUSTADO === */
+@media (max-width: 768px) {
+    .typewriter-wrapper {
+        display: block;
+        /* Ocupa el ancho para poder centrar el texto */
+        min-height: 2.6em;
+        /* Reservamos espacio para 2 líneas (evita saltos) */
+
+        /* IMPORTANTE: Usamos text-align en vez de flex para que el cursor fluya natural */
+        text-align: center;
+    }
+}
+
+/* === FAQ ACCORDION STYLES === */
+.faq-item.active .faq-content {
+    height: auto; /* Se calculará en JS, pero esto es respaldo */
+}
+
+.faq-item.active svg {
+    transform: rotate(180deg);
+    color: var(--accent-primary);
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+

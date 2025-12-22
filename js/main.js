@@ -178,4 +178,108 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ... (Tu código anterior) ...
+
+    // --- 7. ScrollSpy (Menú Activo Inteligente) ---
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function highlightMenu() {
+        let current = '';
+        const scrollY = window.scrollY;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            // 150px es un "offset" para que detecte la sección un poco antes de llegar
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            // Comparamos el href del link (#inicio) con el id actual (inicio)
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Ejecutar al hacer scroll
+    window.addEventListener('scroll', highlightMenu);
+
+
+    // --- 8. Animated Stats Counters (Contadores Animados) ---
+    const stats = document.querySelectorAll('.stat-number');
+
+    // Función para animar un contador individual
+    const animateCount = (el) => {
+        const originalText = el.innerText; // Ej: "10+" o "100%"
+        const target = parseInt(originalText.replace(/\D/g, '')); // Extrae solo números (10)
+        const suffix = originalText.replace(/[0-9]/g, ''); // Extrae lo que no es número (+ o %)
+
+        const duration = 2000; // Duración en ms (2 segundos)
+        const stepTime = 20;   // Actualizar cada 20ms
+        const steps = duration / stepTime;
+        const increment = target / steps;
+
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+
+            if (current >= target) {
+                el.innerText = target + suffix; // Asegurar valor final exacto
+                clearInterval(timer);
+            } else {
+                el.innerText = Math.ceil(current) + suffix;
+            }
+        }, stepTime);
+    };
+
+    // Usamos Intersection Observer para animar SOLO cuando se ve en pantalla
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                observer.unobserve(entry.target); // Animar solo una vez
+            }
+        });
+    }, { threshold: 0.5 }); // Se activa cuando el 50% del número es visible
+
+    stats.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    // ... tu código anterior ...
+
+    // --- 9. FAQ Accordion Logic ---
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+
+        header.addEventListener('click', () => {
+            // Cerrar otros items abiertos (opcional, para efecto acordeón único)
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-content').style.height = '0';
+                }
+            });
+
+            // Toggle del item actual
+            item.classList.toggle('active');
+            const content = item.querySelector('.faq-content');
+
+            if (item.classList.contains('active')) {
+                // Abrir: Asignamos la altura real del contenido (scrollHeight)
+                content.style.height = content.scrollHeight + 'px';
+            } else {
+                // Cerrar
+                content.style.height = '0';
+            }
+        });
+    });
 });
