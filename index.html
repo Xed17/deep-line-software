@@ -682,26 +682,33 @@
             </div>
 
             <div class="glass-card rounded-2xl p-6 md:p-12">
-                <form>
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Nombre</label>
-                            <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg" required>
+                <form action="https://formspree.io/f/mvzpvvla" method="POST" class="space-y-6">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium ml-1" style="color: var(--text-secondary);">Nombre</label>
+                            <input type="text" name="nombre" required
+                                class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                                style="color: var(--text-primary);" placeholder="Tu nombre">
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" placeholder="tucorreo@ejemplo.com" class="w-full px-4 py-3 rounded-lg"
-                                required>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium ml-1" style="color: var(--text-secondary);">Email</label>
+                            <input type="email" name="email" required
+                                class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                                style="color: var(--text-primary);" placeholder="ejemplo@correo.com">
                         </div>
                     </div>
 
-                    <div class="mb-6">
-                        <label class="block text-sm font-medium mb-2">Mensaje</label>
-                        <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5"
-                            class="w-full px-4 py-3 rounded-lg resize-none" required></textarea>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium ml-1" style="color: var(--text-secondary);">Mensaje</label>
+                        <textarea name="mensaje" rows="4" required
+                            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-none"
+                            style="color: var(--text-primary);" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                     </div>
 
-                    <button type="submit" class="w-full px-8 py-4 rounded-xl btn-primary text-lg">
+                    <button type="submit"
+                        class="w-full py-4 rounded-xl btn-primary font-bold text-lg shadow-lg hover:shadow-blue-500/25 transition-all transform hover:-translate-y-1">
                         Enviar Mensaje
                     </button>
                 </form>
