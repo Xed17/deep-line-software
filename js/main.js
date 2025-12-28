@@ -109,10 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (typewriterElement) {
         const phrases = [
-            "Soluciones Reales",
-            "Apps Móviles",
-            "Software a Medida",
-            "Experiencias Únicas"
+            "Experiencias\nÚnicas",       // Se escribirá "Experiencias", bajará y escribirá "Únicas"
+            "Software\na Medida",         // Software (arriba), a Medida (abajo)
+            "Aplicaciones\nWeb",              // Apps (arriba), Móviles (abajo)
+            "Ingeniería\nAvanzada"
         ];
 
         let phraseIndex = 0;
