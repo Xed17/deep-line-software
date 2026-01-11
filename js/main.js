@@ -20,7 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+
+        // Actualizar imagen del hero
+        updateHeroImage(newTheme);
     };
+
+    function updateHeroImage(theme) {
+        const heroLogo = document.getElementById('hero-logo');
+        if (heroLogo) {
+            heroLogo.src = theme === 'light' ? 'assets/img/isotipo_light.png' : 'assets/img/isotipo_dark.png';
+        }
+    }
+
+    // Set initial image based on current theme
+    updateHeroImage(html.getAttribute('data-theme'));
 
     // --- 2. Scroll Progress Bar (Optimized) ---
     const scrollProgress = document.getElementById('scrollProgress');
